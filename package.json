@@ -1,0 +1,39 @@
+{
+  "name": "emdedd",
+  "version": "0.1.0",
+  "description": "Live-links TypeScript and C# source code into Markdown documentation",
+  "type": "module",
+  "bin": {
+    "embed-sync": "dist/src/index.js"
+  },
+  "main": "dist/src/index.js",
+  "files": [
+    "dist/src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node dist/test/run.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "markdown",
+    "embed",
+    "documentation",
+    "typescript",
+    "csharp",
+    "code-sync"
+  ],
+  "author": "Shlomi Assaf",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shlomiassaf/emdedd.git"
+  },
+  "dependencies": {
+    "glob": "^11.0.0",
+    "typescript": "~5.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}
