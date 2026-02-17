@@ -23,4 +23,4 @@ Single-file CLI tool: `src/index.ts` → compiled to `dist/src/index.js`
 - Tests run from `dist/test/run.js` but reference source fixtures via `../../test/fixtures/`
 - Must `npm run build` before `npm test` — tests execute compiled output
 - `files` in package.json scoped to `dist/src` — test code not published
-- CI publishes to npm on `v*` tags — requires NPM_TOKEN secret in GitHub repo settings
+- CI publishes to npm on `v*` tags — requires NPM_TOKEN secret in GitHub repo settings or Trusted Publisher role for GitHub Actions

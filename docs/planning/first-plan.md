@@ -45,7 +45,7 @@
 ### 6. `.github/workflows/ci.yml`
 - Trigger: push to main, PRs
 - Jobs: build + test (Node 20)
-- npm publish on tag push (uses `NPM_TOKEN` secret)
+- npm publish on tag push (uses `NPM_TOKEN` secret or Trusted Publisher role for GitHub Actions)
 
 ## Execution Order
 1. Create package.json, tsconfig.json, .gitignore

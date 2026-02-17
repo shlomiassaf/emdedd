@@ -57,7 +57,7 @@ test/fixtures/
 
 ### Prerequisites
 
-- `NPM_TOKEN` secret must be configured in the GitHub repo settings (Settings → Secrets → Actions).
+- Either Trusted Publisher role for GitHub Actions or `NPM_TOKEN` secret must be configured in the GitHub repo settings (Settings → Secrets → Actions).
 - The token needs publish permissions for the `emdedd` package on npmjs.com.
 
 ## CI Pipeline
