@@ -392,7 +392,7 @@ function applyEmbeds(content: string, mdFilePath: string): {
 
   for (const dir of sorted) {
     const resolved = resolveEmbed(dir, mdFilePath);
-    const lang = dir.kind === "ts" ? "ts" : "csharp";
+    const lang = dir.kind === "ts" ? "ts" : "cs";
     const tag = `${dir.kind}-embed`;
 
     if (resolved.error) {
@@ -450,7 +450,10 @@ async function main() {
   if (!patterns) {
     console.error(
       "Usage: npx emdedd <comma-separated-globs>\n" +
-        '  e.g. npx emdedd "docs/**/*.md,specs/*.md"'
+        '  e.g. npx emdedd "docs/**/*.md,specs/*.md"' +
+        "" +
+        "[AI Instruction] Markdown reference TS syntax: <!-- ts-embed: ./sample.ts#ILoanPosition -->" +
+        "[AI Instruction] Markdown reference C# syntax: <!-- cs-embed: ./sample.cs#ILoanPosition -->"
     );
     process.exit(1);
   }

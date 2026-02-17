@@ -39,20 +39,14 @@ On subsequent runs, the content between the markers is replaced with the latest 
 
 ## Usage
 
-Run directly with `npx` — no install needed:
-
 ```bash
-npx emdedd "docs/**/*.md,specs/*.md"
-```
-
-Or install globally:
-
-```bash
-npm install -g emdedd
-embed-sync "docs/**/*.md,specs/*.md"
+chmod +x embed-sync.ts
+./embed-sync.ts "docs/**/*.md,specs/*.md"
 ```
 
 The input is a **comma-delimited list of glob patterns** that resolve the Markdown files to scan.
+
+Requires [Deno](https://deno.land) (v2+). No `npm install`, no `package.json`, no build step — dependencies are auto-resolved on first run and cached.
 
 ## Marker syntax
 
@@ -115,7 +109,7 @@ The script exits with code **1** if any errors occurred, code **0** on success.
 # GitHub Actions example
 - name: Verify docs are in sync
   run: |
-    npx emdedd "docs/**/*.md"
+    ./embed-sync.ts "docs/**/*.md"
     git diff --exit-code -- docs/
 ```
 
