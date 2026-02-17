@@ -1,6 +1,6 @@
 {
   "name": "emdedd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Live-links TypeScript and C# source code into Markdown documentation",
   "type": "module",
   "bin": {
